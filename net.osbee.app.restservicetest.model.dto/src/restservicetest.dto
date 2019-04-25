@@ -5,16 +5,19 @@ import ns net.osbee.app.restservicetest.model.entities.Person
 package net.osbee.app.restservicetest.model.dtos {
 
 	autoDto BaseIDDto wraps BaseID {
+
 		inheritVar id
 		inheritVar ^version
 	}
 
 	autoDto BaseUUIDDto wraps BaseUUID {
+
 		inheritVar id
 		inheritVar ^version
 	}
 
 	autoDto PersonDto extends BaseUUIDDto wraps Person {
+
 		inheritVar firstName
 		inheritVar lastName
 		inheritVar birthdate

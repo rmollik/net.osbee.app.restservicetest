@@ -50,6 +50,11 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.babel.editor.rbeBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 	</buildSpec>
 	<natures>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
@@ -58,5 +63,6 @@
 		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
 		<nature>org.eclipse.bpmn2.modeler.core.bpmn2Nature</nature>
 		<nature>org.eclipse.osbp.ide.core.ui.softwarefactory.OSBP2Nature</nature>
+		<nature>org.eclipse.babel.editor.rbeNature</nature>
 	</natures>
 </projectDescription>

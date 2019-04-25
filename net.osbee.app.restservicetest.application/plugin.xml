@@ -45,22 +45,6 @@
         	name="showFrame"
         	value="false">
         </property>
-        <property
-              name="startupForegroundColor"
-              value="000000">
-        </property>
-        <property
-              name="startupMessageRect"
-              value="5,380,570,20">
-        </property>
-        <property
-              name="startupProgressRect"
-              value="5,400,570,15">
-        </property>
-        <property
-              name="preferenceCustomization"
-              value="plugin_customization.ini">
-        </property>
       </product>
    </extension>
    <extension

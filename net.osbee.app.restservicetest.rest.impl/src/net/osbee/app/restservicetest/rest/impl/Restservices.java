@@ -21,8 +21,8 @@ import net.osbee.app.restservicetest.rest.api.IRestservices;
 @Component(immediate = true, property = { "service.exported.interfaces=*", 
 		"service.exported.intents=osgi.async",
 		"service.exported.intents=jaxrs","osgi.basic.timeout=5000000",
-		"ecf.jaxrs.jersey.server.pathPrefix=/helpdeskservice",
-		"ecf.jaxrs.jersey.server.alias=/test"
+		//"ecf.jaxrs.jersey.server.pathPrefix=/helpdeskservice",
+		"ecf.jaxrs.jersey.server.alias=ralf"
 		})
 public class Restservices implements IRestservices {
 	

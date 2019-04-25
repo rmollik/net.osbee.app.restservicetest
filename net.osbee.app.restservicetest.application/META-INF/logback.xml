@@ -19,6 +19,7 @@
         </encoder>
 	</appender>
 
+	<logger name="org.eclipse.osbp.gitinfo" level="OFF"/>
 	<logger name="org.eclipse.osbp.authentication.ui.login.InitializationListener" level="error"/>
 	<logger name="org.eclipse.osbp.xtext.dialogdsl.common.AbstractECViewDialog" level="error"/>
 	<logger name="org.eclipse.osbp.persistence.fragment.PersistenceExceptionHandler" level="error"/>
