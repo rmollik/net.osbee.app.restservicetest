@@ -1,0 +1,633 @@
+/**
+ * Copyright (c) 2011, 2019 - Loetz GmbH&Co.KG, 69115 Heidelberg, Germany
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License 2.0 
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html *
+ * Contributors: 
+ *		Loetz GmbH&Co.KG, 69115 Heidelberg, Germany
+ */
+
+package org.eclipse.osbp.reports.layouts {
+
+    layout-data {
+         formatters {
+            /** empty UOMO format */
+            uomo uomo_test {
+                ui "test"
+                report "test"
+                textalign left
+            }
+
+            /** money in EURO, rounding half-up */
+            currency money_euro {
+                ui "###,##0.00 ?"
+                report currency "#,##0.00 EUR{RoundingMode=HALF_UP}"
+                textalign right
+            }
+
+            /** date without time with weekday */
+            date+time shortdate {
+                ui "SHORTDATE"
+                report custom "dd.MM.yyyy"
+                textalign left
+            }
+
+            /** integer */
+            number integer {
+                ui "##0"
+                report percent "##0"
+                textalign right
+            }
+
+            /** percent */
+            number ^percent {
+                ui "##0.0'%'"
+                report percent "##0.0'%'"
+                textalign right
+            }
+        }
+ 
+        colors {
+            /** the basic text color: BLACK */
+            color black "#000000"
+            /** grey rgb(128,128,128) */
+            color grey_128 "#808080"
+            /** grey rgb(136,136,136) */
+            color grey_136 "#888888"
+            /** grey rgb(220,220,220) */
+            color grey_220 "#dcdcdc"
+            /** grey rgb(235,235,235) */
+            color grey_235 "#ebebeb"
+            /** grey rgb(250,250,250) */
+            color grey_250 "#fafafa"
+            /** grey rgb(101,101,101) */            
+            color grey_101 "#656565"
+            /** the basic background color: WHITE */
+            color white "#ffffff"
+            /** lightblue, according style guide rgb(244,252,255), but to bright on screens! */
+            color lightblue "#e4ecff"
+            //color lightblue "#52edc7"
+            color red "#ff3b30"
+            color orange "#ffcc00"
+            color darkblue "#007aff"
+            color customBlue "#0082FF"
+            color customGreyC8C8C8 "#C8C8C8"
+            color customGrey808080 "#808080"
+            color customGreyC0C0C0 "#C0C0C0"
+            color customGreyC0C0C0 "#C0C0C0"
+            color lightblueF4FCFF "#F4FCFF"
+            color lightgreyEBEBEB "#EBEBEB"
+        }
+ 
+         fonts {
+            font arial_14pt_bold {
+                family "Arial"
+                bold
+                size 14 pt
+            }
+
+            font arial_12pt_regular {
+                family "Arial"
+                normal
+                size 12 pt
+            }
+
+            font arial_12pt_bold {
+                family "Arial"
+                bold
+                size 12 pt
+            }
+
+            font arial_10pt_regular {
+                family "Arial"
+                normal
+                size 10 pt
+            }
+
+            font arial_10pt_bold extends font_10pt_bold {
+                family "Arial"
+            }
+
+            font font_10pt_bold {
+                bold
+                size 10 pt
+            }
+
+            font arial_8pt_regular {
+                family "Arial"
+                normal
+                size 8 pt
+            }
+
+            font arial_8pt_bold {
+                family "Arial"
+                bold
+                size 8 pt
+            }
+
+            font arial_7pt_bold {
+                family "Arial"
+                bold
+                size 7 pt
+            }
+            
+            // Beleg fonts
+            font sansSerif6pt {
+            	family sans-serif
+            	size 6 pt
+            }
+            font sansSerif8pt {
+            	family sans-serif
+            	size 8 pt
+            }
+            font sansSerif10pt {
+            	family sans-serif
+            	size 10 pt
+            }
+            font sansSerifBold {
+            	family sans-serif
+            	bold
+            }
+            font sansSerif9pt {
+            	family sans-serif
+            	size 9 pt
+            }
+            
+            font sansSerif9ptBold extends sansSerif9pt {
+            	bold
+            }
+            
+            font sansSerif14ptBold extends sansSerifBold {
+            	size 14 pt
+            }
+            
+            font sansSerif8ptBold extends sansSerifBold {
+            	size 8 pt
+            }
+            
+            font sansSerif12ptBold extends sansSerifBold {
+            	size 12 pt
+            }
+            
+            font sansSerif14pt {
+            	family sans-serif
+            	size 14 pt
+            }
+            
+            font sansSerif7ptBolder extends sansSerifBold {
+            	size 7 pt
+            }
+            
+        }
+ 
+        medias {
+            /** format for a table report, for example used for desk job */
+            media ^middle
+            /** format for a table report, for example used for warehouse */
+            media big
+            /** format for a table report, for example used for desk job or $$$Ablage$$$ */
+            media small
+            /** reports like delivery notes, invoices, etc. */
+            media ^report
+        }
+
+        styles {
+            /** Bootstrap style */
+            style bootstrap {
+                textcolor black
+                backgroundcolor white
+                font arial_8pt_regular
+                media big {
+                    font arial_12pt_regular
+                }
+            }
+
+            /** headline */
+            style headline {
+                extends bootstrap
+                font arial_14pt_bold
+            }
+
+            /** page header */
+            style page_header {
+                extends bootstrap
+                font arial_10pt_regular
+                media big {
+                    font arial_12pt_regular
+                }
+                media small {
+                    font arial_8pt_regular
+                }
+            }
+
+            /** table header */
+            style table_header {
+                extends bootstrap
+                font arial_8pt_bold
+                backgroundcolor grey_101
+                textcolor grey_250
+                media big {
+                    font arial_12pt_bold
+                }
+            }
+
+            /** 1st grouping header */
+            style grouping_1_header {
+                extends bootstrap
+                font arial_8pt_bold
+                backgroundcolor grey_101
+                textcolor grey_250
+                media big {
+                    font arial_12pt_bold
+                }
+                media small {
+                    font arial_8pt_bold
+                }
+            }
+
+            /** 2nd and more grouping header */
+            style grouping_2_header {
+                extends bootstrap
+                font arial_10pt_bold
+                backgroundcolor grey_250
+                border-top solid 1 grey_136
+                media big {
+                    font arial_12pt_bold
+                }
+                media small {
+                    font arial_8pt_bold
+                }
+            }
+
+            /** default row (lowest level) */
+            style defaultrow {
+                extends bootstrap
+                font arial_8pt_regular
+                backgroundcolor white alternate grey_220
+                padding-left 2 
+                padding-right 2 
+                media big {
+                    font arial_12pt_regular
+                }
+            }
+
+            /** if a currency has to be rendered */
+            style ^currency {
+                extends defaultrow
+                formatter money_euro
+            }
+
+            /** if a date with weekday has to be rendered */
+            style ^date {
+                extends defaultrow
+                formatter shortdate
+            }
+
+            /** a pure integer value */
+            style integer {
+                extends defaultrow
+                formatter integer
+            }
+
+            /** 2nd and more grouping footer */
+            style grouping_2_footer {
+                extends bootstrap
+                font arial_10pt_regular
+                backgroundcolor grey_250
+                border-top solid 1 grey_136
+                border-bottom solid 1 grey_136
+                media big {
+                    font arial_12pt_regular
+                }
+                media small {
+                    font arial_8pt_regular
+                }
+            }
+
+            /** 1st grouping footer */
+            style grouping_1_footer {
+                extends bootstrap
+                font arial_10pt_regular
+                backgroundcolor grey_235
+                border-top solid 1 black
+                border-bottom solid 1 black
+                media big {
+                    font arial_12pt_regular
+                }
+                media small {
+                    font arial_8pt_regular
+                }
+            }
+
+            /** table footer */
+            style table_footer {
+                extends bootstrap
+                font arial_10pt_regular
+                backgroundcolor white
+                border-top solid 1 black
+                border-bottom solid 1 black
+                media big {
+                    font arial_12pt_regular
+                }
+                media small {
+                    font arial_8pt_regular
+                }
+            }
+
+            /** page footer */
+            style page_footer {
+                extends bootstrap
+                font arial_7pt_bold
+            }
+            
+            style rightAlignment {
+				textalign right
+			}
+			
+            style centerMiddleAlignment {
+				textalign center
+				verticalalign middle
+			}
+			
+            style bottomAlignment {
+				textalign right
+			}
+			
+			// Beleg Styles
+			style headlineAddressField{
+				font sansSerif6pt
+			}
+            
+			style senderField{
+				font sansSerif8pt
+			}
+            
+			style addressField {
+				padding-left 0.1
+				font sansSerifBold
+			}
+			style tableCellHeader {
+				font sansSerif9ptBold
+				backgroundcolor customBlue
+				textcolor white
+				border-bottom solid 0.1 black 
+				border-left solid 0.1
+				border-right solid 0.1
+				border-top none 0.0
+			}
+			
+			style tableDetailRow {
+				textcolor black
+				textalign center
+                font sansSerif9pt
+                backgroundcolor white alternate lightblue
+                padding-left 2 
+                padding-right 2 
+                media big {
+                    font arial_12pt_regular
+                }
+            }
+            
+            style subjectLine {
+            	font sansSerif14ptBold
+            	margin-top 5 
+            }
+			
+			            /** page footer */
+            style page_footer_beleg {
+                font sansSerif7ptBolder
+                border-top solid 1 black
+            }
+			
+                        /** 2nd and more grouping header */
+            style grouping_2_header {
+                extends bootstrap
+                font arial_10pt_bold
+                backgroundcolor grey_250
+                border-top solid 1 grey_136
+                media big {
+                    font arial_12pt_bold
+                }
+                media small {
+                    font arial_8pt_bold
+                }
+            }
+            
+                        /** 1st grouping footer */
+            style grouping_1_footer {
+                extends bootstrap
+                font arial_10pt_regular
+                backgroundcolor grey_235
+                border-top solid 1 black
+                border-bottom solid 1 black
+                media big {
+                    font arial_12pt_regular
+                }
+                media small {
+                    font arial_8pt_regular
+                }
+            }
+            
+                        /** if a date with weekday has to be rendered */
+            style ^date {
+                extends defaultrow
+                formatter shortdate
+            }
+
+            /** a pure integer value */
+            style integer {
+                extends defaultrow
+                formatter integer
+            }
+            
+            
+            // ******************************** START Template styles ***********************************
+            
+			
+
+            style table_header_cell {
+            	backgroundcolor customGreyC8C8C8
+            	font font_10pt_bold
+            	border-bottom solid 0.35 /* = 1pt */
+            	border-left solid 0.35 /* = 1pt */ customGrey808080
+            	border-right solid 0.35 /* = 1pt */ customGrey808080
+            	border-top solid 0.35 /* = 1pt */
+            } 
+
+            style table_footer_cell {
+            	border-bottom solid 0.35 /* = 1pt */
+            	border-left solid 0.35 /* = 1pt */ customGreyC0C0C0
+            	border-right solid 0.35 /* = 1pt */ customGreyC0C0C0
+            	border-top solid 0.35 /* = 1pt */
+            } 
+
+            style table_group_footer_cell {
+            	border-bottom none 0.35 /* = 1pt */
+            	border-left solid 0.35 /* = 1pt */ customGreyC0C0C0
+            	border-right solid 0.35 /* = 1pt */ customGreyC0C0C0
+            	border-top solid 0.35 /* = 1pt */ grey_136
+            	backgroundcolor lightgreyEBEBEB
+            }
+            
+            style table_group_header_cell {
+            	font sansSerif8ptBold
+            	border-bottom solid 0.35 /* = 1pt */ grey_136
+            	border-left solid 0.35 /* = 1pt */ customGreyC0C0C0
+            	border-right solid 0.35 /* = 1pt */ customGreyC0C0C0
+            	border-top solid 0.35 /* = 1pt */
+            	backgroundcolor lightgreyEBEBEB
+            }
+            
+            style table_detail_cell {
+            	font sansSerif8pt
+            	border-left solid 0.35 /* = 1pt */ customGreyC0C0C0
+            	border-right solid 0.35 /* = 1pt */ customGreyC0C0C0
+            	backgroundcolor white alternate lightblueF4FCFF
+            }
+            
+            style table_detail_cell_no_padding {
+            	padding-left 0.0
+            	padding-right 0.0
+            	padding-bottom 0.0
+            	padding-top 0.0
+            }
+            
+            style table_detail_cell_right {
+            	font sansSerif8pt
+            	border-left solid 0.35 /* = 1pt */ customGreyC0C0C0
+            	border-right solid 0.35 /* = 1pt */ customGreyC0C0C0
+            	backgroundcolor white alternate lightblueF4FCFF
+            	textalign right
+            }
+            
+            style table_detail_cell_center {
+            	font sansSerif8pt
+            	border-left solid 0.35 /* = 1pt */ customGreyC0C0C0
+            	border-right solid 0.35 /* = 1pt */ customGreyC0C0C0
+            	backgroundcolor white alternate lightblueF4FCFF
+            	textalign center
+            }
+                        
+            style table_style {
+            	font sansSerif8pt
+            	border-bottom solid 0.35 /* = 1pt */ customGreyC0C0C0
+            }
+            
+            style report_style {
+            	font sansSerif8pt
+            	border-top solid 0.35 /* = 1pt */
+            }
+            
+            style page_header_template {
+            	padding-top 0.35 /* = 1pt */
+            	font sansSerif14ptBold
+            }
+
+            style page_footer_template {
+            	font sansSerif7ptBolder
+            	border-top solid 0.35 
+            }
+            
+            style param_grid {
+            	font sansSerif10pt
+            	border-top solid 0.35 /* = 1pt */
+            }
+
+            style param_grid_cell {
+            	padding-top 3
+            	padding-bottom 3
+            }
+
+            style param_grid_12_bold {
+            	font sansSerif12ptBold
+            	border-top solid 0.35 /* = 1pt */
+            }
+
+            style param_grid_10_bold {
+            	font sansSerif12ptBold
+            	border-top solid 0.35 /* = 1pt */
+            }
+
+            // ******************************** END Template styles ***********************************
+
+            
+        }
+ 
+        /** Paper A4 in landscape mode with automatic page numbers in the footer */
+        pagetemplate A4_Landscape {
+            type a4
+            orientation landscape
+            topmargin 11.5 
+            leftmargin 12 
+            bottommargin 13 
+            rightmargin 14 
+            header {
+                // showOnFirst
+                height 0.6 
+                label "a A4 landscape page"
+            }
+            footer {
+                showOnLast
+                height 10 
+                grid {
+                    row {
+                        cell {
+                            label "page"
+                        }
+                        cell {
+                            autotext page-number
+                        }
+                        cell {
+                            label "of"
+                        }
+                        cell {
+                            autotext total-page
+                        }
+                    }
+                }
+            }
+        }
+
+
+        /** Paper A4 in portrait mode without automatic page numbers */
+        pagetemplate A4_Portrait {
+            type a4
+            orientation portrait
+            topmargin 10 
+            leftmargin 13 
+            bottommargin 12 
+            rightmargin 11 
+            header {
+                showOnFirst height 0.0 
+                label ""
+            }
+            footer {
+                showOnLast height 10.0 
+                label ""
+            }
+        }
+        
+                /** Paper A4 in portrait mode without automatic page numbers */
+        pagetemplate A4_Portrait_Template {
+            type a4
+            orientation portrait
+            topmargin 0 
+            leftmargin 10 
+            bottommargin 0 
+            rightmargin 5 
+            header {
+                showOnFirst height 12.7 /* = 0.5in */
+                label ""
+            }
+            footer {
+                showOnLast height 12.7 /* = 0.5in */
+                label ""
+            }
+        }
+        
+
+     }
+}
+
+

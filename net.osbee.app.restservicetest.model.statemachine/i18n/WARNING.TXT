@@ -1,0 +1,3 @@
+Always use proper *.properties files editors to write Unicode texts!
+Never ever use any umlauts inside the texts, encode them via \uxxxx syntax instead!
+You can use the online tool to convert mistyped text: http://itpro.cz/juniconv/ with "UTF-8 text >> Java Entities"!

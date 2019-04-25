@@ -1,0 +1,43 @@
+SAMPLE_VENDOR_COUNTRY = network
+SAMPLE_VENDOR_NAME = Loetz GmbH&Co.KG, 69115 Heidelberg, Germany
+SAMPLE_VENDOR_ISO3166 = net
+
+BUNDLE_VERSION = 0.0.1 
+BUSINESS_BUNDLE_CLASS_NAME = restservicetest
+BUSINESS_BUNDLE = restservicetest
+BUSINESSDATA_DATABASE_SCHEMA = H2MEMORY
+BUSINESSDATA_DATASOURCE_NAME = oracle
+BUSINESSDATA_PERSISTENCE_UNIT = businessdata
+VAACLIPSE_THEME = osbp
+
+BASIC_PROJECT_NAME = net.osbee.app.restservicetest
+BASIC_SYMBLIC_NAME = net.osbee.app.restservicetest
+MODEL_PROJECT_NAME = net.osbee.app.restservicetest.model
+MODEL_SYMBOLIC_NAME = net.osbee.app.restservicetest.model
+PRODUCT_PROJECT_NAME = net.osbee.app.restservicetest.product
+PRODUCT_SYMBLIC_NAME = net.osbee.app.restservicetest.product
+
+ENTITY_PROPERTY_BASE_ID = uuid String
+ENTITY_PROPERTY_BASE_UUID = uuid String
+
+MOCK_PRODUCT_DATA_FORCE = FORCE-
+MOCK_PRODUCT_DATA_PROJECT_NAME = net.osbee.app.restservicetest
+MOCK_AUTHENTICATION_DATA_FORCE = FORCE-
+MOCK_BLOB_DATA_FORCE = FORCE-
+
+PRODUCT_PORT_NO = 8081
+PRODUCT_URL_PATH = /restservicetest
+PRODUCT_DESKTOP_URL_PATH = /restservicetest
+PRODUCT_MOBILE_URL_PATH = /restservicetestmobile
+
+PROJECT_FILE_PATH = net/osbee/app/restservicetest
+
+THEME_SYMBOLIC_BUNDLE_NAME = net.osbee.app.restservicetest.application
+THEME_SYMBOLIC_NAME = net.osbee.app.restservicetest
+THEME_PROJECT_NAME = net.osbee.app.restservicetest
+
+PROJECT_LOC = E:/eclipse/DEV/workspace2/net.osbee.app.restservicetest/net.osbee.app.restservicetest.application
+
+BREE_VERSION = 1.8
+XMS_SIZE = 8164
+XMX_SIZE = 8164

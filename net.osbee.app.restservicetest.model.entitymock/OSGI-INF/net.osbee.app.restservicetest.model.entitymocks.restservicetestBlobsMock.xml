@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="net.osbee.app.restservicetest.model.entitymocks.restservicetestBlobsMock">
+   <service>
+      <provide interface="org.eclipse.osbp.xtext.entitymock.common.IEntityMockDataGenerator"/>
+   </service>
+   <implementation class="net.osbee.app.restservicetest.model.entitymocks.restservicetestBlobsMock"/>
+</scr:component>

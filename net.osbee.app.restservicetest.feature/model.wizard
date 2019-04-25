@@ -1,0 +1,17 @@
+BASIC_PROJECT_NAME = net.osbee.app.restservicetest
+BASIC_SYMBOLIC_NAME = net.osbee.app.restservicetest
+MODEL_PROJECT_NAME = net.osbee.app.restservicetest.model
+MODEL_SYMBOLIC_NAME = net.osbee.app.restservicetest.model
+PRODUCT_PROJECT_NAME = net.osbee.app.restservicetest.product
+PRODUCT_SYMBOLIC_NAME = net.osbee.app.restservicetest.product
+APPLICATION_PROJECT_NAME = net.osbee.app.restservicetest.application
+APPLICATION_SYMBOLIC_NAME = net.osbee.app.restservicetest.application
+AGGREGATOR_PROJECT_NAME = net.osbee.app.restservicetest.aggregator
+AGGREGATOR_SYMBOLIC_NAME = net.osbee.app.restservicetest.aggregator
+FEATURE_PROJECT_NAME = net.osbee.app.restservicetest.feature
+FEATURE_SYMBOLIC_NAME = net.osbee.app.restservicetest.feature
+
+PROJECT_FILE_PATH = net/osbee/app/restservicetest
+
+PROJECT_LOC = E:/eclipse/DEV/workspace2/net.osbee.app.restservicetest/net.osbee.app.restservicetest.application
+

@@ -1,0 +1,18 @@
+/**
+ * Copyright (c) 2011, 2019 - Loetz GmbH&Co.KG, 69115 Heidelberg, Germany
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License 2.0 
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html *
+ * Contributors: 
+ *		Loetz GmbH&Co.KG, 69115 Heidelberg, Germany
+ */
+
+import ns net.osbee.app.restservicetest.model.actions.Dialog
+import ns net.osbee.app.restservicetest.model.dtos.PersonDto
+
+package net.osbee.app.restservicetest.model.dialogs {
+
+	dialog Person autobinding PersonDto toolbar Dialog
+
+}

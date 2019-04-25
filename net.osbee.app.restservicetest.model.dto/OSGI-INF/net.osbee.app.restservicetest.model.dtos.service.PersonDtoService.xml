@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="net.osbee.app.restservicetest.model.dtos.service.persondtoservice">
+       <implementation class="net.osbee.app.restservicetest.model.dtos.service.PersonDtoService"/>
+       <service>
+       	<provide interface="org.eclipse.osbp.runtime.common.filter.IDTOService"/>
+       </service>
+       <property name="dto" type="String" value="net.osbee.app.restservicetest.model.dtos.PersonDto"/>
+       <property name="service.pid" type="String" value="net.osbee.app.restservicetest.model.dtos.service.persondtoservice"/>
+<reference name="mapperAccess" interface="org.eclipse.osbp.dsl.dto.lib.IMapperAccess" cardinality="1..1" 
+	policy="dynamic" bind="bindMapperAccess" unbind="unbindMapperAccess"/>
+<reference name="filterEnhancers" interface="org.eclipse.osbp.runtime.common.filter.IFilterEnhancer" cardinality="0..n"
+		policy="dynamic" bind="addFilterEnhancer" unbind="removeFilterEnhancer"/>
+<reference name="sessionManager" interface="org.eclipse.osbp.runtime.common.session.ISessionManager" cardinality="1..1"
+					policy="dynamic" bind="bindSessionManager" unbind="unbindSessionManager"/>
+<reference name="validators" interface="org.eclipse.osbp.runtime.common.validation.IValidationParticipant" cardinality="0..n"
+	policy="dynamic" bind="addValidationParticipant" unbind="removeValidationParticipant"/>
+</scr:component>

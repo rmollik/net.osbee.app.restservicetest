@@ -1,0 +1,38 @@
+/**
+ * Copyright (c) 2011, 2019 - Loetz GmbH&Co.KG, 69115 Heidelberg, Germany
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License 2.0 
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html *
+ * Contributors: 
+ *		Loetz GmbH&Co.KG, 69115 Heidelberg, Germany
+ */
+
+
+package net.osbee.app.restservicetest.model.actions {
+
+	command newItem keyBinding "CTRL ALT N" dialogAction New
+
+	command saveItem keyBinding "CTRL ALT S" dialogAction Save
+
+	command deleteItem keyBinding "CTRL ALT D" dialogAction Delete
+
+	command cancelItem keyBinding "CTRL ALT Z" dialogAction Cancel
+	
+ 	command print reportAction PrintOnServer
+ 
+	command printDownload reportAction Download
+
+    toolbar Dialog describedBy "Toolbar for Dialogs" items {
+        item newItem command newItem icon "new"
+        item saveItem command saveItem icon "save"
+        item deleteItem command deleteItem icon "filter_except"
+        item cancelItem command cancelItem icon "nopic_small"
+    }
+    
+    toolbar Report describedBy "Toolbar for reports" items {
+		item printDownload command printDownload icon "download"
+		item print command print icon "print"
+	}
+    
+}

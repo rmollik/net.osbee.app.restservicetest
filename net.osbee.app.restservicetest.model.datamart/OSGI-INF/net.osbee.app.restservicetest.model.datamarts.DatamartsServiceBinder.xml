@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="net.osbee.app.restservicetest.model.datamarts.DatamartsServiceBinder">
+   <reference bind="bindBPMMethod" cardinality="0..1" interface="org.eclipse.osbp.bpm.api.IBPMEngine" name="BPMMethod" policy="dynamic" unbind="unbindBPMMethod"/>
+   <reference bind="bindDSLMetadataService" cardinality="1..1" interface="org.eclipse.osbp.ui.api.metadata.IDSLMetadataService" name="DSLMetadataService" policy="static" unbind="unbindDSLMetadataService"/>
+   <reference bind="bindPersistenceMethod" cardinality="1..1" interface="org.eclipse.osbp.core.api.persistence.IPersistenceService" name="PersistenceMethod" policy="static" unbind="unbindPersistenceMethod"/>
+   <reference bind="bindTaskClient" cardinality="0..1" interface="org.eclipse.osbp.bpm.api.IBPMTaskClient" name="TaskClient" policy="dynamic" unbind="unbindTaskClient"/>
+   <reference bind="bindUserAccessMethod" cardinality="1..1" interface="org.eclipse.osbp.ui.api.useraccess.IUserAccessService" name="UserAccessMethod" policy="static" unbind="unbindUserAccessMethod"/>
+   <implementation class="net.osbee.app.restservicetest.model.datamarts.DatamartsServiceBinder"/>
+</scr:component>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="net.osbee.app.restservicetest.rest.feature"
+      label="Feature net.osbee.app.restservicetest.rest (do not install into IDE)"
+      version="0.1.0.qualifier"
+      provider-name="Loetz GmbH &amp; Co. KG"
+      plugin="net.osbee.app.restservicetest.application">
+
+   <description>
+      An SDK feature for net.osbee.app.restservicetest -- do not install
+   </description>
+
+   <copyright>
+      (c) Copyright 2016 - Loetz GmbH &amp; Co. KG
+   </copyright>
+
+   <includes
+         id="org.eclipse.ecf.provider.jersey.server.feature"
+         version="0.0.0"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.rest.impl"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.rest.api"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.mycorp.examples.student.remoteservice.host"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.mycorp.examples.student"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.equinox.http.jetty"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

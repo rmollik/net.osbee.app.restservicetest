@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="net.osbee.app.restservicetest.rest.impl.Restservices">
+   <property name="service.exported.interfaces" value="*"/>
+   <property name="service.exported.intents">osgi.async
+jaxrs
+   </property>
+   <property name="osgi.basic.timeout" value="5000000"/>
+   <property name="ecf.jaxrs.jersey.server.pathPrefix" value="/helpdeskservice"/>
+   <property name="ecf.jaxrs.jersey.server.alias" value="/test"/>
+   <service>
+      <provide interface="net.osbee.app.restservicetest.rest.api.IRestservices"/>
+   </service>
+   <implementation class="net.osbee.app.restservicetest.rest.impl.Restservices"/>
+</scr:component>

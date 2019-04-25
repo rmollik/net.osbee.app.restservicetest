@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="FILE" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="E:/eclipse/DEV/workspace2/net.osbee.app.restservicetest/net.osbee.app.restservicetest.application/log/osbee2.log" />
+		<param name="Append" value="false" />
+		<param name="MaxFileSize" value="500KB" />
+		<param name="MaxBackupIndex" value="1" />
+
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p [%c] %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ABSOLUTE} %-5p [%c{1}] %m%n" />
+		</layout>
+	</appender>
+	<logger name="org.milyn">
+		<level value="ERROR" />
+	</logger>
+
+	<logger name="freemarker">
+		<level value="ERROR" />
+	</logger>
+
+	<logger	name="org.eclipse.osbp.ide.core.ui.softwarefactory.builder.OSBP2Builder">
+		<level value="DEBUG" />
+	</logger>
+	<logger name="org.eclipse.osbp.gitinfo.Activator">
+		<level value="OFF" />
+	</logger>
+	<logger name="org.eclipse.osbp.gitinfo.Loginfo">
+		<level value="OFF" />
+	</logger>
+	<logger name="org.eclipse.xtext.builder.smap.DebugSourceInstallingCompilationParticipant">
+		<level value="OFF" />
+	</logger>
+	<logger	name="org.eclipse.xtext.resource.impl.DefaultResourceDescriptionStrategy">
+		<level value="OFF" />
+	</logger>
+	<logger name="org.osbp.runtime.common.metric.TimeLogger">
+		<level value="OFF" />
+	</logger>
+	<logger name="org.eclipse.xtext.linking.impl.DefaultLinkingService">
+		<level value="OFF" />
+	</logger>
+	<logger name="org.eclipse.xtext.linking.impl.ImportedNamesAdapter">
+		<level value="OFF" />
+	</logger>
+	<logger	name="org.eclipse.osbp.xtext.datamartdsl.scoping.DatamartDSLScopeProvider">
+		<level value="error" />
+	</logger>
+	<logger name="org.osbp.dsl.xtext.lazyresolver.linker.FastLinkingService">
+		<level value="OFF" />
+	</logger>
+	<logger	name="org.osbp.dsl.xtext.lazyresolver.linker.SemanticLoadingResource">
+		<level value="OFF" />
+	</logger>
+	<logger name="org.eclipse.emf.ecore.xcore.scoping.types.CachingTypeScope">
+		<level value="OFF" />
+	</logger>
+	<logger name="org.eclipse.osbp.csvedit.extension.ModelExtender">
+		<level value="error" />
+	</logger>
+	<logger name="mondrian">
+		<level value="ERROR" />
+	</logger>
+	<logger name="mondrian.mdx">
+		<level value="error" />
+	</logger>
+	<logger name="mondrian.sql">
+		<level value="error" />
+	</logger>
+	<logger name="mondrian.server.monitor">
+		<level value="ERROR" />
+	</logger>
+	<logger name="mondrian.profile">
+		<level value="ERROR" />
+	</logger>
+
+	<root>
+		<level value="ERROR" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</root>
+</log4j:configuration>   

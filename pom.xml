@@ -1,0 +1,152 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.eclipse.osbp.releng.maven</groupId>
+		<artifactId>org.eclipse.osbp.releng.maven.parent.tycho</artifactId>
+		<version>0.9.0-SNAPSHOT</version>
+		<relativePath />
+	</parent>
+
+	<groupId>net.osbee.app.restservicetest</groupId>
+	<artifactId>net.osbee.app.restservicetest.aggregator</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<repositories>
+		<repository>
+			<name>Platform Repo</name>
+			<id>deltapack</id>
+			<layout>p2</layout>
+			<url>http://download.osbee.org/downloads/p2/org.eclipse.platform-4.6.3/</url>
+		</repository>
+	</repositories>
+
+	<properties>
+		<license.licenseName>LOETZGMBHUCOKG</license.licenseName>
+		<license.copyrightOwners>Loetz GmbH &amp; Co. KG</license.copyrightOwners>
+		<osbee.gitrepo.name>net.osbee.app.restservicetest</osbee.gitrepo.name>
+	</properties>
+
+	<modules>
+		<module>net.osbee.app.restservicetest.model.action</module>
+		<module>net.osbee.app.restservicetest.model.authorization</module>
+		<module>net.osbee.app.restservicetest.model.blip</module>
+		<module>net.osbee.app.restservicetest.model.chart</module>
+		<module>net.osbee.app.restservicetest.model.cube</module>
+		<module>net.osbee.app.restservicetest.model.datainterchange</module>
+		<module>net.osbee.app.restservicetest.model.datamart</module>
+		<module>net.osbee.app.restservicetest.model.datatype</module>
+		<module>net.osbee.app.restservicetest.model.dialog</module>
+		<module>net.osbee.app.restservicetest.model.dto</module>
+		<module>net.osbee.app.restservicetest.model.entity</module>
+		<module>net.osbee.app.restservicetest.model.entitymock</module>
+		<module>net.osbee.app.restservicetest.model.functionlibrary</module>
+		<module>net.osbee.app.restservicetest.model.menu</module>
+		<module>net.osbee.app.restservicetest.model.message</module>
+		<module>net.osbee.app.restservicetest.model.organization</module>
+		<module>net.osbee.app.restservicetest.model.perspective</module>
+		<module>net.osbee.app.restservicetest.model.report</module>
+		<module>net.osbee.app.restservicetest.model.table</module>
+		<module>net.osbee.app.restservicetest.model.topology</module>
+		<module>net.osbee.app.restservicetest.application</module>
+		<module>net.osbee.app.restservicetest.rest.api</module>
+		<module>net.osbee.app.restservicetest.rest.impl</module>
+		<module>net.osbee.app.restservicetest.rest.feature</module>
+		<module>net.osbee.app.restservicetest.feature</module>
+		<module>net.osbee.app.restservicetest.product</module>
+	</modules>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>target-platform-configuration</artifactId>
+					<version>${tycho-version}</version>
+					<configuration>
+						<target>
+							<artifact>
+								<groupId>org.eclipse.osbp.releng.maven</groupId>
+								<artifactId>org.eclipse.osbp.releng.maven.runtime.target</artifactId>
+								<version>0.9.0-SNAPSHOT</version>
+							</artifact>
+						</target>
+						<environments>
+							<environment>
+								<os>linux</os>
+								<ws>gtk</ws>
+								<arch>x86</arch>
+							</environment>
+							<environment>
+								<os>linux</os>
+								<ws>gtk</ws>
+								<arch>x86_64</arch>
+							</environment>
+							<environment>
+								<os>macosx</os>
+								<ws>cocoa</ws>
+								<arch>x86_64</arch>
+							</environment>
+							<environment>
+								<os>win32</os>
+								<ws>win32</ws>
+								<arch>x86_64</arch>
+							</environment>
+							<environment>
+								<os>win32</os>
+								<ws>win32</ws>
+								<arch>x86</arch>
+							</environment>
+						</environments>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>pl.project13.maven</groupId>
+				<artifactId>git-commit-id-plugin</artifactId>
+				<version>2.2.0</version>
+				<executions>
+					<execution>
+					<configuration>
+						<skip>true</skip>
+					</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>xtend-gen</directory>
+							<includes>
+								<include>**</include>
+							</includes>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.xtend</groupId>
+				<artifactId>xtend-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+							<goal>testCompile</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>xtend-gen</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="net.osbee.app.restservicetest.model.actions.CommandsProvider">
+   <service>
+      <provide interface="org.eclipse.osbp.ui.api.contextfunction.ICommandsProvider"/>
+   </service>
+   <implementation class="net.osbee.app.restservicetest.model.actions.CommandsProvider"/>
+</scr:component>

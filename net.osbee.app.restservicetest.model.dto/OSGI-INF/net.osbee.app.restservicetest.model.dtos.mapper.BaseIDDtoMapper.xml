@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="net.osbee.app.restservicetest.model.dtos.mapper.baseiddtomapper">
+       <implementation class="net.osbee.app.restservicetest.model.dtos.mapper.BaseIDDtoMapper"/>
+       <service>
+		<provide interface="org.eclipse.osbp.dsl.dto.lib.IMapper"/>
+		  </service>
+		  
+		<property name="fordto.from.entity" type="String" value="net.osbee.app.restservicetest.model.entities.BaseID"/>
+		<property name="fordto.to.dto" type="String" value="net.osbee.app.restservicetest.model.dtos.BaseIDDto"/>
+
+		<property name="forentity.from.dto" type="String" value="net.osbee.app.restservicetest.model.dtos.BaseIDDto"/>
+		<property name="forentity.to.entity" type="String" value="net.osbee.app.restservicetest.model.entities.BaseID"/>
+		
+		<property name="service.pid" type="String" value="net.osbee.app.restservicetest.model.dtos.mapper.baseiddtomapper"/>
+		<reference name="mapperAccess" interface="org.eclipse.osbp.dsl.dto.lib.IMapperAccess" 
+				cardinality="1..1" policy="static" bind="bindMapperAccess" unbind="unbindMapperAccess"/>
+</scr:component>

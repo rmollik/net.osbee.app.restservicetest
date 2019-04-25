@@ -1,0 +1,12 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/persistence persistence_1_0.xsd"
+        version="1.0">
+  <persistence-unit name="businessdata" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>net.osbee.app.restservicetest.model.datatype.entities.Employee</class>
+    <class>org.eclipse.osbp.utils.blob.BlobMapping</class>
+    <class>org.eclipse.osbp.utils.blob.Blob</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+  </persistence-unit>
+</persistence>

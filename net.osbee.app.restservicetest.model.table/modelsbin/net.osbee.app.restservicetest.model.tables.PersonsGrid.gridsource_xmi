@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tabledsl:TableDtoDatasource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:style="http://osbp.eclipse.org/gridsource/v1/core/style" xmlns:tabledsl="http://osbp.eclipse.org/xtext/table/TableDSL" id="net.osbee.app.restservicetest.model.tables.PersonsGrid" rootTypeFQN="net.osbee.app.restservicetest.model.dtos.PersonDto">
+  <properties dotPath="firstName" editable="true" sourceFQN="net.osbee.app.restservicetest.model.dtos.PersonDto">
+    <style xsi:type="style:CxGridPropTextStyle"/>
+  </properties>
+  <properties dotPath="lastName" editable="true" sourceFQN="net.osbee.app.restservicetest.model.dtos.PersonDto">
+    <style xsi:type="style:CxGridPropTextStyle"/>
+  </properties>
+  <properties dotPath="birthdate" editable="true" sourceFQN="net.osbee.app.restservicetest.model.dtos.PersonDto">
+    <style xsi:type="style:CxGridPropDateStyle"/>
+  </properties>
+  <dtoSource href="platform:/resource/net.osbee.app.restservicetest.model.dto/src/restservicetest.dto#/0/@packages.0/@types.2"/>
+</tabledsl:TableDtoDatasource>

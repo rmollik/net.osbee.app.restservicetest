@@ -1,0 +1,687 @@
+/**
+ * Copyright (c) 2011, 2019 - Loetz GmbH&Co.KG, 69115 Heidelberg, Germany
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License 2.0 
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html *
+ * Contributors: 
+ *		Loetz GmbH&Co.KG, 69115 Heidelberg, Germany
+ */
+
+ePackage "http://osbp.eclipse.org/ecview/dsl/uimodel/core" as view
+
+actions {
+	org.eclipse.osbp.^actions.save
+	org.eclipse.osbp.^actions.load
+	org.eclipse.osbp.^actions.delete
+	org.eclipse.osbp.^actions.find
+}
+
+element Browser {  
+	uri view:UiBrowser
+	
+	bindings {
+		/**
+		 * Value property of the UI element.
+		 */
+		endpoint value Object
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+	}
+}  
+ 
+element TextField {  
+	uri view:UiTextField
+	
+	bindings {
+		/**
+		 * Value property of the UI element.
+		 */
+		endpoint value String
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+	}
+	
+	validator {
+		property validators
+	} 
+}  
+
+element TextArea {  
+	uri view:UiTextArea
+	
+	bindings {
+		/**
+		 * Value property of the UI element.
+		 */
+		endpoint value String
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+	}
+	
+	validator {
+		property validators
+	} 
+}  
+
+element DateField {  
+	uri view:UiDateField
+	
+	bindings {
+		/**
+		 * Value property of the UI element.
+		 */
+		endpoint value String
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+	}
+	
+	validator {
+		property validators
+	} 
+}  
+
+
+
+element Label {
+	uri view:UiLabel
+	
+	bindings {
+		/**
+		 * Value property of the UI element.
+		 */
+		endpoint value String
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+	}
+	 
+	validator {
+		property validators
+	} 
+} 
+
+element Image {
+	uri view:UiImage
+	
+	bindings {
+		/**
+		 * Value property of the UI element.
+		 */
+		endpoint value String
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+	}
+
+}  
+    
+element CheckBox {
+	uri view:UiCheckBox
+	
+	bindings {
+		/**
+		 * Value property of the UI element.
+		 */
+		endpoint value Boolean
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+	}
+	
+	validator {
+		property validators
+	}
+}
+
+element Button {
+	uri view:UiButton
+	 
+	bindings {
+		/**
+		 * If the ui element is clicked, it will return
+		 * the clicktime in milliseconds.
+		 */
+		endpoint onClick Long target lastClickTime
+		/**
+		 * Enabled property of the UI element.
+		 */
+		endpoint enabled Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+	}
+	
+	validator {
+		property validators
+	}
+}
+
+element MobileNavigationBarAction {
+	uri view:UiMobileNavBarAction
+	 
+	bindings {
+		/**
+		 * If the ui element is clicked, it will return
+		 * the clicktime in milliseconds.
+		 */
+		endpoint onClick Long target lastClickTime
+		/**
+		 * Enabled property of the UI element.
+		 */
+		endpoint enabled Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+	}
+	
+	validator {
+		property validators
+	}
+}
+
+element NumericField {
+	uri view:UiNumericField
+	
+	bindings {
+		/**
+		 * Value property of the UI element.
+		 */
+		endpoint value Integer
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Enabled property of the UI element.
+		 */
+		endpoint enabled Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+	}
+	
+	validator {
+		property validators
+	}
+} 
+
+element DecimalField {
+	uri view:UiDecimalField
+	
+	bindings {
+		/**
+		 * Value property of the UI element.
+		 */
+		endpoint value Double
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+		/**
+		 * Locale property of the UI element.
+		 */
+		endpoint locale Locale
+	}
+	
+	validator {
+		property validators
+	}
+} 
+
+element List {  
+	uri view:UiList
+	
+	bindings {
+		/**
+		 * Returns the selected entry.
+		 * Only available in singleselection mode.
+		 */
+		final endpoint selection Object
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+		/**
+		 * Returns the collection of list entries.
+		 */
+		list endpoint collection Object
+		/**
+		 * Returns the collection of multi selections.
+		 * Only available in multiselection mode.
+		 */
+		endpoint multiSelection Object
+	}
+
+	validator {
+		property validators
+	}
+}
+
+element Table {
+	uri view:UiTable
+	
+	bindings {
+		/**
+		 * Returns the selected entry.
+		 * Only available in singleselection mode.
+		 */
+		final endpoint selection Object
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+		
+		/**
+		 * If any value is sent to this property, the table will become refreshed.
+		 */
+		endpoint refresh void
+		
+		/**
+		 * Returns the collection of list entries.
+		 */
+		list endpoint collection Object
+		/**
+		 * Returns the collection of multi selections.
+		 * Only available in multiselection mode.
+		 */
+		endpoint multiSelection Object
+		/**
+		 * The filter property for the table. 
+		 * Filters can be applied to tables. As an input you may use a 
+		 * binding to FilterPanel#filter 
+		 */
+		endpoint filter Object
+	}
+
+	validator {
+		property validators
+	}
+}
+
+element OptionsGroup {  
+	uri view:UiOptionsGroup
+	
+	bindings {
+		/**
+		 * Returns the selected entry.
+		 * Only available in singleselection mode.
+		 */
+		final endpoint selection Object
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+		/**
+		 * Returns the collection of list entries.
+		 */
+		list endpoint collection Object
+		/**
+		 * Returns the collection of multi selections.
+		 * Only available in multiselection mode.
+		 */
+		endpoint multiSelection Object
+	}
+
+	validator {
+		property validators
+	}
+}
+
+ 
+element ComboBox {  
+	uri view:UiComboBox
+	 
+	bindings {
+		/**
+		 * Returns the selected entry.
+		 */
+		final endpoint selection Object
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+		/**
+		 * Returns the collection of list entries.
+		 */
+		list endpoint collection Object
+	}
+
+	validator {
+		property validators
+	}
+}
+
+/**
+ * A mobile navigation page.
+ */
+element MobileNavigationPage {   
+	uri view:UiMobileNavigationPage
+
+	bindings {
+		/**
+		 * Returns the input value of the navigation page
+		 */
+		final /**
+		 * Value property of the UI element.
+		 */
+		endpoint value Object
+		
+		/**
+		 * If any object is set to this property, the navigation page
+		 * will navigate back.
+		 */
+		final endpoint navigateBack void
+		
+		/**
+		 * If the navigation page is closed, it will return
+		 * the clicktime in milliseconds.
+		 */
+		endpoint onNavigateBack Long
+	}
+
+	validator {
+		property validators
+	}
+}
+
+element GridLayout {
+	uri view:UiGridLayout
+	
+	bindings {
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+		/**
+		 * The number of columns in the GridLayout.
+		 */
+		endpoint columns Integer
+	}
+	
+}
+
+element Dialog {
+	uri view:UiDialog
+	
+	bindings {
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+		/**
+		 * Input value property of the UI element.
+		 * Every dialog needs to become passed an input value.
+		 */
+		endpoint value Object
+	}
+	
+}
+
+element VerticalLayout {
+	uri view:UiVerticalLayout
+	
+	bindings {
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+	}
+	
+}
+
+element VerticalGroup {
+	uri view:UiVerticalComponentGroup
+	
+	bindings {
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+	}
+	
+}
+
+element SearchField {
+	uri view:UiSearchField
+	
+	bindings {
+		/**
+		 * Value property of the UI element.
+		 */
+		endpoint value String
+	}
+	
+}
+
+element Form {
+	uri view:UiFormLayout
+	
+	bindings {
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+	}
+	
+}
+
+element VerticalGroup {
+	uri view:UiVerticalComponentGroup
+	
+	bindings {
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+	}
+	
+}
+
+element Switch {
+	uri view:UiSwitch
+	
+	bindings {
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+		/**
+		 * Value property of the UI element.
+		 */
+		endpoint value Boolean
+	}
+	
+}
+
+element ProgressBar {  
+	uri view:UiProgressBar
+	
+	bindings {
+		/**
+		 * Value property of the UI element.
+		 */
+		endpoint value float
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+	}
+}
+
+/**
+ * Search panel is a layout where SearchFields can be put in. A search panel
+ * needs to be <code>typed</code>. So you have to specify a <code>JvmType</code>
+ * for its <code>type-property</code>. The type property is the <code>java class</code>
+ * you want to query for. For instance JPA, JDBC,... 
+ */
+element SearchPanel {
+	uri view:UiSearchPanel
+
+	bindings {
+		/*
+		 * If <code>any kind of value</code> is passed to this property, the 
+		 * search panel will collect the filter from it's search fields
+		 * and puts the properly prepared filter to it's filter property.<br>
+		 * To get an instance of the filter, just bind the <code>#filter</code> 
+		 * property of this panel to any search target.<br>
+		 * The type of returned filter depends on the used UI-Kit.
+		 */  
+		endpoint applyFilter Object
+		
+		/**
+		 * This property contains a properly prepared filter. The search panel
+		 * will assemble a filter based on the contained search fields. <br>
+		 * Assembling filter is triggered by the <code>#applyFilter</code>
+		 * property.
+		 * <br>
+		 * The type of returned filter depends on the used UI-Kit.
+		 */
+		endpoint filter Object
+	}
+}
+
+/**
+ * Search panel is a layout where SearchFields can be put in. A search panel
+ * needs to be <code>typed</code>. So you have to specify a <code>JvmType</code>
+ * for its <code>type-property</code>. The type property is the <code>java class</code>
+ * you want to query for. For instance JPA, JDBC,... 
+ */
+element MobileSearchPanel {
+	uri view:UiMobileSearchPanel
+
+	bindings {
+		/*
+		 * If <code>any kind of value</code> is passed to this property, the 
+		 * search panel will collect the filter from it's search fields
+		 * and puts the properly prepared filter to it's filter property.<br>
+		 * To get an instance of the filter, just bind the <code>#filter</code> 
+		 * property of this panel to any search target.<br>
+		 * The type of returned filter depends on the used UI-Kit.
+		 */  
+		endpoint applyFilter Object
+		
+		/**
+		 * This property contains a properly prepared filter. The search panel
+		 * will assemble a filter based on the contained search fields. <br>
+		 * Assembling filter is triggered by the <code>#applyFilter</code>
+		 * property.
+		 * <br>
+		 * The type of returned filter depends on the used UI-Kit.
+		 */
+		endpoint filter Object
+	}
+}
+
+element BeanReferenceField {  
+	uri view:UiBeanReferenceField
+	
+	bindings {
+		/**
+		 * Value property of the UI element.
+		 */
+		endpoint value Object
+		/**
+		 * Editable property of the UI element.
+		 */
+		endpoint editable Boolean
+		/**
+		 * Visible property of the UI element.
+		 */
+		endpoint visible Boolean
+	}
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="Publish the product for download" default="main">
+	<target name="main">
+		<echo>Publishing products to ${product.targetFolder}</echo>
+		<mkdir dir="${basedir}/target/products/"/>
+		<copy todir="${product.targetFolder}">
+			<fileset dir="${basedir}/target/products/">
+				<include name="*.zip" />
+				<include name="*.tar.gz" />
+			</fileset>
+		</copy>
+	</target>
+</project>
+

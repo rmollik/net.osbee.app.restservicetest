@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="net.osbee.app.restservicetest.model.statemachines.StatemachinesServiceBinder">
+   <reference bind="bindFunctionLibraryService" cardinality="1..1" interface="org.eclipse.osbp.ui.api.functionlibrary.IFunctionLibraryService" name="FunctionLibraryService" policy="static" unbind="unbindFunctionLibraryService"/>
+   <implementation class="net.osbee.app.restservicetest.model.statemachines.StatemachinesServiceBinder"/>
+</scr:component>

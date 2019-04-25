@@ -1,0 +1,86 @@
+/**
+ * Copyright (c) 2011, 2019 - Loetz GmbH&Co.KG, 69115 Heidelberg, Germany
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License 2.0 
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html *
+ * Contributors: 
+ *		Loetz GmbH&Co.KG, 69115 Heidelberg, Germany
+ */
+
+/**
+ * Copyright (c) 2011, 2014 - Lunifera GmbH (Gross Enzersdorf), Loetz GmbH&Co.KG (Heidelberg)
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors: 
+ * 		Florian Pirchner - Initial implementation
+ */
+
+package net.osbee.app.restservicetest.model.datatypes {
+
+    datatype boolean jvmType java.lang.Boolean asPrimitive
+    datatype short jvmType java.lang.Short asPrimitive
+    datatype int jvmType java.lang.Integer asPrimitive
+    datatype long jvmType java.lang.Long asPrimitive
+    datatype double jvmType java.lang.Double asPrimitive
+    datatype float jvmType java.lang.Float asPrimitive
+    datatype character jvmType java.lang.Character asPrimitive
+    datatype byte jvmType java.lang.Byte asPrimitive
+
+    datatype Boolean jvmType java.lang.Boolean
+    datatype Short jvmType java.lang.Short
+    datatype Int jvmType java.lang.Integer
+    datatype Long jvmType java.lang.Long
+    datatype Double jvmType java.lang.Double
+    datatype Float jvmType java.lang.Float
+    datatype Character jvmType java.lang.Character
+    datatype Byte jvmType java.lang.Byte
+    datatype BigDecimal jvmType java.math.BigDecimal
+
+    datatype String jvmType java.lang.String
+	datatype Date dateType date
+
+	datatype BlobMapping jvmType java.lang.String 
+		properties (
+			key="Blob" value="2"
+			/**
+			 * value="0" name="unnormalized" resolution="unknown"
+			 * value="1" name="small" resolution="16x16"
+			 * value="2" name="mid" resolution="64x64"
+			 * value="3" name="portrait" resolution="64x128"
+			 * value="4" name="landscape" resolution="128x64"
+			 * value="5" name="big" resolution="200x-1"
+			 * 			 
+			 */
+		)
+
+	datatype Price jvmType Double properties(key="decimalformat" value="###,##0.00 &curren;")
+	datatype DateOnly dateType date properties(key = "Date" value = "Day")
+	datatype BirthDate dateType date isNotNull isPast[severity=error] properties(key = "Date" value = "Day")
+	datatype Time dateType time
+	datatype TextArea jvmType java.lang.String properties(key = "TextArea" value = "5") // used for TextArea
+
+	/**
+     * The RichText_Short datatype represents the attribute as a RichTextArea. 
+     * The max length of the input depends on the underlying database. 
+     * If you need to hold bigger data, then use the #RichText_Long.   
+     */
+ 	datatype RichText_Short jvmType String
+  		properties(key = "type" value = "richTextArea")
+	/**
+     * The RichText datatype represents the attribute as a RichTextArea. 
+     * The type in the data model will be a Blob. 
+     */
+ 	datatype RichText_Long asBlob
+  		properties(key = "type" value = "richTextArea")
+	/**
+     * The Password datatype represents the attribute as a PasswordField. 
+     * The type in the data model will be a String. 
+   	 */
+ 	datatype Password jvmType String
+  		properties(key = "type" value = "password")
+
+}

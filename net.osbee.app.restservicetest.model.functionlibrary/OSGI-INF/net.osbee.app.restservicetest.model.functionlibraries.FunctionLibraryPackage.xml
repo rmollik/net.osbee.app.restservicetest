@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="net.osbee.app.restservicetest.model.functionlibraries.FunctionLibraryPackage">
+   <service>
+      <provide interface="org.eclipse.osbp.ui.api.functionlibrary.IFunctionLibraryPackage"/>
+   </service>
+   <implementation class="net.osbee.app.restservicetest.model.functionlibraries.FunctionLibraryPackage"/>
+</scr:component>

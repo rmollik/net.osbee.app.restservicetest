@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ActivationPolicy: lazy
+Bundle-ManifestVersion: 2
+Bundle-Name: net.osbee.app.restservicetest.application
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-SymbolicName: net.osbee.app.restservicetest.application;singleton:=true
+Bundle-Vendor: Loetz GmbH&Co.KG, 69115 Heidelberg, Germany
+Bundle-Version: 0.0.1.qualifier
+Import-Package: org.apache.log4j,
+ org.apache.commons.logging

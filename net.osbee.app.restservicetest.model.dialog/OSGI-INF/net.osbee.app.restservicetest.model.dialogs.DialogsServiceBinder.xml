@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="net.osbee.app.restservicetest.model.dialogs.DialogsServiceBinder">
+   <reference bind="bindDSLMetadataService" cardinality="1..1" interface="org.eclipse.osbp.ui.api.metadata.IDSLMetadataService" name="DSLMetadataService" policy="static" unbind="unbindDSLMetadataService"/>
+   <reference bind="bindPersistenceService" cardinality="1..1" interface="org.eclipse.osbp.core.api.persistence.IPersistenceService" name="PersistenceService" policy="static" unbind="unbindPersistenceService"/>
+   <reference bind="bindReportProvider" cardinality="1..1" interface="org.eclipse.osbp.ui.api.report.IReportProvider" name="ReportProvider" policy="static" unbind="unbindReportProvider"/>
+   <reference bind="bindThemeResourceService" cardinality="1..1" interface="org.eclipse.osbp.ui.api.themes.IThemeResourceService" name="ThemeResourceService" policy="static" unbind="unbindThemeResourceService"/>
+   <reference bind="bindUserAccessService" cardinality="1..1" interface="org.eclipse.osbp.ui.api.useraccess.IUserAccessService" name="UserAccessService" policy="static" unbind="unbindUserAccessService"/>
+   <implementation class="net.osbee.app.restservicetest.model.dialogs.DialogsServiceBinder"/>
+</scr:component>

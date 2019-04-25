@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="net.osbee.app.restservicetest.feature"
+      label="%featureName%"
+      version="0.0.1.qualifier"
+      provider-name="%provide%"
+      plugin="net.osbee.app.restservicetest.application">
+
+   <description>
+      %description%
+   </description>
+
+   <copyright>
+      %copyright%
+   </copyright>
+   
+   <includes
+         id="org.eclipse.osbp.datainterchange.api.feature"
+         version="0.0.0"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.application"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.action"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.authorization"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.blip"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.chart"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.cube"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.datainterchange"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.datamart"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.datatype"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.dialog"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.dto"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.entity"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.entitymock"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.functionlibrary"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.menu"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.message"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.organization"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.perspective"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.report"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.statemachine"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.table"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.osbee.app.restservicetest.model.topology"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
+

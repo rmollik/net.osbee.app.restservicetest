@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ASCII"?>
+<core:YView xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:binding="http://osbp.eclipse.org/ecview/v1/core/binding" xmlns:core="http://osbp.eclipse.org/ecview/v1/core/view" xmlns:extension="http://osbp.eclipse.org/ecview/v1/extension/view" xmlns:model="http://osbp.de/ecview/v1/extension" xmlns:visibility="http://osbp.de/ecview/v1/extension/visibility" id="net.osbee.app.restservicetest.model.dialogs.autobinded.Person" name="net.osbee.app.restservicetest.model.dialogs.autobinded.Person" viewName="net.osbee.app.restservicetest.model.dialogs.autobinded.Person" contentAlignment="UNDEFINED">
+  <content xsi:type="extension:YHorizontalLayout" label="" labelI18nKey="">
+    <elements xsi:type="model:YStrategyLayout" id="strategyLayout">
+      <suspects xsi:type="model:YTypedSuspect" id="net.osbee.app.restservicetest.model.dialogs.autobinded.Person.PersonDto.firstName" authorizationGroup="net.osbee.app.restservicetest.model.dtos.PersonDto" authorizationId="firstName" labelI18nKey="firstName" label="firstName" typeQualifiedName="java.lang.String" type="java.lang.String">
+        <tags>text</tags>
+        <valueBindingEndpoints xsi:type="binding:YDetailValueBindingEndpoint" propertyPath="firstName" type="net.osbee.app.restservicetest.model.dtos.PersonDto">
+          <masterObservable xsi:type="core:YBeanSlotValueBindingEndpoint" attributePath="value" beanSlot="//@beanSlots.0"/>
+        </valueBindingEndpoints>
+      </suspects>
+      <suspects xsi:type="model:YTypedSuspect" id="net.osbee.app.restservicetest.model.dialogs.autobinded.Person.PersonDto.lastName" authorizationGroup="net.osbee.app.restservicetest.model.dtos.PersonDto" authorizationId="lastName" labelI18nKey="lastName" label="lastName" typeQualifiedName="java.lang.String" type="java.lang.String">
+        <tags>text</tags>
+        <valueBindingEndpoints xsi:type="binding:YDetailValueBindingEndpoint" propertyPath="lastName" type="net.osbee.app.restservicetest.model.dtos.PersonDto">
+          <masterObservable xsi:type="core:YBeanSlotValueBindingEndpoint" attributePath="value" beanSlot="//@beanSlots.0"/>
+        </valueBindingEndpoints>
+      </suspects>
+      <suspects xsi:type="model:YTypedSuspect" id="net.osbee.app.restservicetest.model.dialogs.autobinded.Person.PersonDto.birthdate" authorizationGroup="net.osbee.app.restservicetest.model.dtos.PersonDto" authorizationId="birthdate" labelI18nKey="birthdate" label="birthdate" typeQualifiedName="java.util.Date" type="java.util.Date">
+        <tags>date</tags>
+        <tags>constraint</tags>
+        <properties key="class" value="net.osbee.app.restservicetest.model.dtos.PersonDto"/>
+        <properties key="name" value="birthdate"/>
+        <properties key="date" value="Day"/>
+        <valueBindingEndpoints xsi:type="binding:YDetailValueBindingEndpoint" propertyPath="birthdate" type="net.osbee.app.restservicetest.model.dtos.PersonDto">
+          <masterObservable xsi:type="core:YBeanSlotValueBindingEndpoint" attributePath="value" beanSlot="//@beanSlots.0"/>
+        </valueBindingEndpoints>
+      </suspects>
+    </elements>
+    <cellStyles target="strategyLayout" alignment="FILL_FILL"/>
+  </content>
+  <beanSlots name="main" valueType="net.osbee.app.restservicetest.model.dtos.PersonDto" valueTypeQualifiedName="net.osbee.app.restservicetest.model.dtos.PersonDto"/>
+  <visibilityProcessors xsi:type="visibility:YAuthorizationVisibilityProcessor"/>
+</core:YView>

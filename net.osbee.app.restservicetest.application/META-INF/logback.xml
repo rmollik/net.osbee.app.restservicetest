@@ -1,0 +1,104 @@
+<configuration scan="true">
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} %-5level %logger{30} - %msg%n%ex{30}</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>E:/eclipse/DEV/workspace2/net.osbee.app.restservicetest/net.osbee.app.restservicetest.application/log/osbp.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- weekly rollover and archiving -->
+            <fileNamePattern>E:/eclipse/DEV/workspace2/net.osbee.app.restservicetest/net.osbee.app.restservicetest.application\log\osbp-%d{yyyy-ww}.log.zip</fileNamePattern>
+            <!-- keep 30 days' worth of history -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} %-5level %logger{30}[:%line]- %msg%n%ex{5}</pattern>
+        </encoder>
+	</appender>
+
+	<logger name="org.eclipse.osbp.authentication.ui.login.InitializationListener" level="error"/>
+	<logger name="org.eclipse.osbp.xtext.dialogdsl.common.AbstractECViewDialog" level="error"/>
+	<logger name="org.eclipse.osbp.persistence.fragment.PersistenceExceptionHandler" level="error"/>
+	<logger name="org.eclipse.osbp.xtext.functionlibrarydsl.provider.FunctionLibraryService" level="error"/>
+	<logger name="org.eclipse.osbp.dsl.dto.lib.services.impl.AbstractDTOService" level="error"/>
+	<logger name="net.osbee.pos.POSService" level="error"/>
+	<logger name="org.eclipse.osbp.utils.vaadin.beeper.Beeper" level="error"/>
+	<logger name="org.drools.api.Activator" level="error"/>
+	<logger name="bitronix.tm.BitronixTransaction" level="error"/>
+	<logger name="net.osbee.organization.permissions.OrganizationService" level="error"/>
+	<logger name="net.osbee.mobile.vaadin.ecview.servlet.mobile.impl.MobileUI" level="error"/>
+	<logger name="org.eclipse.osbp.vaaclipse.addons.softwarefactory.service.OSBPServiceAddon" level="error"/>
+	<logger name="org.eclipse.osbp.vaadin.addons.suggesttext.SuggestTextField" level="ERROR"/>
+	<logger name="org.eclipse.osbp.preferences.ProductConfiguration" level="ERROR"/>
+	<logger name="org.eclipse.osbp.abstractstatemachine.AbstractStateMachineParticipant" level="ERROR"/>
+	<logger name="abstractdto" level="ERROR"/>
+	<logger name="jpos.loader.JposServiceBinder" level="ERROR"/>
+	<logger name="org.eclipse.osbp.runtime.web.ecview.presentation.vaadin.internal.TimeLogger" level="ERROR"/>
+    <logger name="net.osbee.bpm.BPMEngine" level="error"/>
+    <logger name="dataInterchange" level="error"/>
+    <logger name="translations by reflection" level="error"/>
+    <logger name="translations by translator" level="error"/>
+    <logger name="change locale" level="ERROR"/>
+    <logger name="datamarts" level="error"/>
+    <logger name="organizations" level="error"/>
+    <logger name="tables" level="error"/>
+    <logger name="menu" level="error"/>
+    <logger name="charts" level="error"/>
+    <logger name="blip" level="error"/>
+    <logger name="topology" level="error"/>
+    <logger name="taskactionhandler" level="error"/>
+    <logger name="mobileDialog" level="error"/>
+    <logger name="vaaclipseDialog" level="error"/>
+	<logger name="eventdispatcher" level="error"/>
+    <logger name="mock" level="error"/>
+    <logger name="org.eclipse.osbp.bpm.utils.BPMUserGroupCallbackImpl" level="error"/>
+    <logger name="org.eclipse.osbp.utils.vaadin.bpmn.BpmnConverter" level="error"/>
+    <logger name="org.eclipse.osbp.utils.vaadin.bpmn.BpmnWindow" level="error"/>
+    <logger name="org.eclipse.osbp.xtext.builder.metadata.services.impl.MetadataBuilder" level="OFF"/>
+    <logger name="org.eclipse.osbp.authentication.ui.login.AuthenticationProvider" level="error"/>
+    <logger name="org.eclipse.osbp.authentication.providerimpl.UserAccessService" level="error"/>
+    <logger name="org.eclipse.osbp.authentication.providerimpl.UserProtocol" level="error"/>
+    <logger name="org.eclipse.osbp.authentication.vaadin.VaadinSessionManager" level="ERROR"/>
+    <logger name="org.eclipse.osbp.authentication.vaadin.VaadinSessionProvider" level="ERROR"/>
+    <logger name="org.eclipse.osbp.authentication.vaadin.SubjectProvider" level="ERROR"/>
+    <logger name="org.eclipse.osbp.authentication.shiro.extensions.LDAPRealm" level="ERROR"/>
+    <logger name="org.eclipse.osbp.authentication.shiro.extensions.DTORealm" level="ERROR"/>
+    <logger name="org.apache.shiro.authc.pam.ModularRealmAuthenticator" level="ERROR"/>
+    <logger name="org.apache.shiro.realm.AuthenticatingRealm" level="ERROR"/>
+    <logger name="org.apache.shiro.authc.AbstractAuthenticator" level="ERROR"/>
+    <logger name="org.eclipse.osbp.osgi.hybrid.api.HybridVaadinVaaclipseConnector" level="ERROR"/>
+    <logger name="org.eclipse.osbp.osgi.hybrid.api.AbstractHybridVaaclipseView" level="error"/>
+    <logger name="org.atmosphere.cpr.AtmosphereFramework" level="OFF"/>
+    <logger name="org.eclipse.osbp.persistence.PersistenceService" level="error"/>
+    <logger name="org.eclipse.osbp.preferences.PersistenceUnitConfiguration" level="ERROR"/>
+    <logger name="org.eclipse.osbp.utils.mobile.ui.AbstractMobileView" level="ERROR"/>
+    <logger name="servicebinder" level="ERROR"/>
+    <logger name="binder" level="ERROR"/>
+    <logger name="activator" level="ERROR"/>
+    <logger name="org.eclipse.osbp.utils.entitymock.dbfill.ui.EntityMockConsumer" level="error"/>
+    <logger name="org.semanticsoft.vaaclipse.presentation.renderers.SashRenderer" level="ERROR"/>
+    <logger name="org.eclipse.osbp.user.User" level="error"/>
+    <logger name="org.eclipse.osbp.vaaclipse.addons.softwarefactory.bpmImpl.BPMTaskVariablesCache" level="error"/>
+    <logger name="org.eclipse.osbp.vaaclipse.addons.softwarefactory.bpmImpl.BPMTaskClient" level="error"/>
+    <logger name="net.osbee.bpm.ProcessAndTaskEventLogger" level="error"/>
+    <logger name="org.eclipse.osbp.vaaclipse.addons.softwarefactory.bpmImpl.BPMProcessEnhancer" level="error"/>
+    <logger name="org.eclipse.osbp.vaaclipse.addons.contexts.PerspectiveSupport" level="ERROR"/>
+    <logger name="org.eclipse.osbp.xtext.table.common.CellSetIndexedContainer" level="ERROR"/>
+    <logger name="org.eclipse.osbp.dsl.metadata.service.DSLBuilderParticipant" level="ERROR"/>
+    <logger name="org.jbpm.task.service.TaskServiceSession" level="error"/>
+    <logger name="org.jbpm.*" level="error"/>
+    
+	<!-- temporary workaround for https://bugs.eclipse.org/bugs/show_bug.cgi?id=402750 -->
+	<logger name="OSGi" level="OFF" />
+
+	<root level="ERROR">
+		<appender-ref ref="FILE" />
+		<appender-ref ref="STDOUT" />
+	</root>
+
+</configuration>
+
+

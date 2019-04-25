@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="restservicetest" uid="net.osbee.app.restservicetest.product" id="net.osbee.app.restservicetest.application.product" application="org.eclipse.osbp.vaaclipse.addons.app.application" version="0.0.1.qualifier" useFeatures="true" includeLaunchers="true">
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-clearPersistedState -console -consoleLog
+      </programArgs>
+      <vmArgs>-server 
+-Djbpm.enable.multi.con=true
+-Dosgi.requiredJavaVersion=1.8
+-Djava.awt.headless=true
+-Dorg.eclipse.osbp.ecview.jetty.contextpath=/restservicetest 
+-Dorg.eclipse.osbp.ecview.jetty.port=8081
+-Dmvel2.disable.jit=true
+-Dbitronix.tm.journal=null
+-Dlog4j.configuration=file:///E:/eclipse/DEV/workspace2/net.osbee.app.restservicetest/net.osbee.app.restservicetest.application/META-INF/log4j.xml 
+-Dlogback.configurationFile=E:/eclipse/DEV/workspace2/net.osbee.app.restservicetest/net.osbee.app.restservicetest.application/META-INF/logback.xml
+-DproductConfigurationFile=E:/eclipse/DEV/workspace2/net.osbee.app.restservicetest/net.osbee.app.restservicetest.application/DEFAULTFILE
+-DmockDataGeneratorFilter=FORCE-restservicetestUsers,FORCE-restservicetestEntities,FORCE-restservicetestBlobs
+-Xms8164m -Xmx8164m
+      </vmArgs>
+      <vmArgsMac>-Dorg.eclipse.swt.internal.carbon.smallFonts
+      </vmArgsMac>
+   </launcherArgs>
+
+   <windowImages/>
+
+   <splash
+      location="net.osbee.app.restservicetest.product" />
+   <launcher>
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+   </vm>
+
+   <plugins>
+   </plugins>
+
+   <features>
+   	  <feature id="org.eclipse.osbp.dependencies.feature.h2"/>
+
+<feature id="net.osbee.softwarefactory.runtime.feature"/>
+<feature id="net.osbee.softwarefactory.runtime.pos.feature"/>
+      <feature id="net.osbee.app.restservicetest.feature"/>
+      <feature id="org.eclipse.equinox.p2.core.feature" version="1.3.203.v20170131-1444"/>
+   </features>
+
+   <configurations>
+      <plugin id="org.eclipse.gemini.dbaccess.h2" autoStart="true"	startLevel="2" />
+<plugin id="org.apache.aries.spifly.dynamic.bundle" autoStart="true" startLevel="2" />
+<plugin id="org.apache.aries.util" autoStart="true" startLevel="2" />
+<plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+<plugin id="org.eclipse.e4.ui.services" autoStart="false" startLevel="1" />
+<plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+<plugin id="org.eclipse.equinox.coordinator" autoStart="true" startLevel="0" />
+<plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="1" />
+<plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="0" />
+<plugin id="org.eclipse.gemini.naming" autoStart="true" startLevel="3" />
+<plugin id="org.eclipse.osbp.dsl.dto.lib" autoStart="true" startLevel="0" />
+<plugin id="org.eclipse.osbp.dsl.metadata.service" autoStart="true" startLevel="3" />
+<plugin id="org.eclipse.osbp.ecview.extension.strategy" autoStart="true" startLevel="0" />
+<plugin id="org.eclipse.osbp.ecview.jetty.manager" autoStart="true" startLevel="0" />
+<plugin id="org.eclipse.osbp.osgi.hybrid.api" autoStart="true" startLevel="0" />
+<plugin id="org.eclipse.osbp.runtime.ecore.bundlespace" autoStart="true" startLevel="0" />
+<plugin id="org.eclipse.osbp.runtime.event" autoStart="true" startLevel="0" />
+<plugin id="org.eclipse.osbp.runtime.jsr303.validation" autoStart="true" startLevel="4" />
+<plugin id="org.eclipse.osbp.runtime.typeprovider.bundlespace" autoStart="true" startLevel="0" />
+<plugin id="org.eclipse.osbp.utils.entitymock.dbfill.ui" autoStart="true" startLevel="0" />
+<plugin id="org.eclipse.osgi" autoStart="true" startLevel="-1" />
+<plugin id="org.objectweb.asm.commons" autoStart="true" startLevel="2" />
+      <plugin id="net.osbee.mobile.vaadin.ecview.servlet.mobile" autoStart="true" startLevel="0" />
+      <property name="vendor" value="Loetz GmbH und Co. KG - Heidelberg - Germany" />
+   </configurations>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+   </cssInfo>
+
+</product>
+
