@@ -60,8 +60,6 @@
       <plugin id="com.fasterxml.jackson.jaxrs.jackson-jaxrs-base" autoStart="true" startLevel="0" />
       <plugin id="com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider" autoStart="true" startLevel="0" />
       <plugin id="com.fasterxml.jackson.module.jackson-module-jaxb-annotations" autoStart="true" startLevel="0" />
-      <plugin id="com.mycorp.examples.student" autoStart="true" startLevel="0" />
-      <plugin id="com.mycorp.examples.student.remoteservice.host" autoStart="true" startLevel="5" />
       <plugin id="jakarta.annotation-api" autoStart="true" startLevel="0" />
       <plugin id="jakarta.ws.rs-api" autoStart="true" startLevel="0" />
       <plugin id="javassist" autoStart="true" startLevel="0" />

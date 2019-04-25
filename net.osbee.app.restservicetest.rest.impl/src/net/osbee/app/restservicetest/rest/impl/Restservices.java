@@ -16,13 +16,13 @@ import net.osbee.app.restservicetest.rest.api.IRestservices;
 
 
 //The jax-rs path annotation for this service
-@Path("/test")
+@Path("/service")
 //The OSGi DS (declarative services) component annotation. 
 @Component(immediate = true, property = { "service.exported.interfaces=*", 
 		"service.exported.intents=osgi.async",
 		"service.exported.intents=jaxrs","osgi.basic.timeout=5000000",
 		//"ecf.jaxrs.jersey.server.pathPrefix=/helpdeskservice",
-		"ecf.jaxrs.jersey.server.alias=ralf"
+		"ecf.jaxrs.jersey.server.alias=osbee"
 		})
 public class Restservices implements IRestservices {
 	
@@ -37,7 +37,7 @@ public class Restservices implements IRestservices {
 	@Override
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
-	@Path("/servicetest")
+	@Path("/helloworld")
 	public String getServicetest( ) {
 		log.debug("{} getServicetest called ....",Restservices.class.getName());
 		return CLICHED_MESSAGE;
@@ -47,7 +47,7 @@ public class Restservices implements IRestservices {
 	@GET
 	@Consumes(MediaType.TEXT_PLAIN)
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("/servicetest/{in}")
+	@Path("/getPerson/{in}")
 	public PersonDto getServicetest( @PathParam("in") String in ) {
 		
 		log.debug("{} getServicetest( {} ) called ....",Restservices.class.getName(), in);

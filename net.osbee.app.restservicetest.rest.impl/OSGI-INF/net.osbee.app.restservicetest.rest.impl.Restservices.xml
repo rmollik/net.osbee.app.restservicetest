@@ -5,7 +5,7 @@
 jaxrs
    </property>
    <property name="osgi.basic.timeout" value="5000000"/>
-   <property name="ecf.jaxrs.jersey.server.alias" value="ralf"/>
+   <property name="ecf.jaxrs.jersey.server.alias" value="osbee"/>
    <service>
       <provide interface="net.osbee.app.restservicetest.rest.api.IRestservices"/>
    </service>
